@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha256-soW/iAENd5uEBh0+aUIS1m2dK4K6qTcB9MLuOnWEQhw=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/main.css" />
     <title>ToDo приложение</title>
@@ -36,6 +37,14 @@
                 <li class="list-group-item justify-content-center align-items-center listEmpty">
                     <span class="task-title">Список пуст</span>
                 </li>
+
+                <!-- <li class="list-group-item d-flex justify-content-between">
+                    <span class="task-title">Задача</span>
+                    <div>
+                        <button type="button" data-action="done-task" class="btn btn-light align-self-end">Готово</button>
+                        <button type="button" data-action="delete-task" class="btn btn-light align-self-end">Удалить</button>
+                    </div>
+                </li> -->
             </ul>
         </div>
         <!-- //List of tasks -->
@@ -63,9 +72,10 @@
     </div>
 
 
-
-
-    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha256-ITwLtH5uF4UlWjZ0mdHOhPwDpLoqxzfFCZXn1wE56Ps=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/myQuery.js"></script>
 </body>
 
 </html>
