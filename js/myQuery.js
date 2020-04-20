@@ -1,12 +1,17 @@
 $().ready(function() {
 
-    // const noti = new Noty({
-    //     layout: 'topRight',
-    //     container: '.notifycation',
-    //     timeout: 1000,
-    //     closeWith: ['click'],
-    //     visibilityControl: true,
-    // });
+    function showNotification(text, type) {
+        const noty = new Noty({
+            layout: 'topRight',
+            container: '.notifycation',
+            timeout: 1000,
+            closeWith: ['click'],
+            visibilityControl: true,
+            type: type,
+            text: text,
+        }).show();
+    }
+
 
     $('#form').on('submit', function(e) {
         e.preventDefault();
@@ -22,53 +27,19 @@ $().ready(function() {
         $('#addNewTask').val('').focus();
         toogleEmptyList();
 
-
-        // noti.show().setType('warning').setText('Задача добавлена!');
-
-        // Эти обьекты удали
-        const noti = new Noty({
-            layout: 'topRight',
-            container: '.notifycation',
-            timeout: 1000,
-            closeWith: ['click'],
-            visibilityControl: true,
-            type: 'warning',
-            text: 'Задача добавлена!',
-        }).show();
+        showNotification('Задача добавлена!', 'warning');
     })
 
     $('#list-tasks').on('click', function() {
 
         if ($(event.target).attr('data-action') == 'delete-task') {
             $(event.target).closest('.list-group-item').remove();
-            // noti.show().setType('error').setText('Задача удалена!');
-
-            // Эти обьекты удали
-            const noti = new Noty({
-                layout: 'topRight',
-                container: '.notifycation',
-                timeout: 1000,
-                closeWith: ['click'],
-                visibilityControl: true,
-                type: 'error',
-                text: 'Задача удалена!',
-            }).show();
+            showNotification('Задача удалена!', 'error');
 
         } else if ($(event.target).attr('data-action') == 'done-task') {
             $(event.target).closest('.list-group-item').addClass('list-group-item-secondary').children('span').addClass('strike');
             event.target.remove();
-            // noti.show().setType('success').setText('Задача выполнена!');
-
-            // Эти обьекты удали
-            const noti = new Noty({
-                layout: 'topRight',
-                container: '.notifycation',
-                timeout: 1000,
-                closeWith: ['click'],
-                visibilityControl: true,
-                type: 'success',
-                text: 'Задача выполнена!',
-            }).show();
+            showNotification('Задача выполнена!', 'success');
         }
         toogleEmptyList();
 
