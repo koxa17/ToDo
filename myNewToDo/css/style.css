@@ -1,0 +1,40 @@
+.clear-list {
+    height: 150px;
+}
+
+.clear-list_paragraph {
+    font-size: 24px;
+}
+
+.edit-item:hover {
+    cursor: pointer;
+    color: rgb(216, 216, 16);
+}
+
+.save-item:hover {
+    cursor: pointer;
+    color: rgb(44, 147, 51);
+}
+
+.succsess-item {
+    color: green;
+}
+
+.succsess-item:hover {
+    cursor: pointer;
+    color: #26f114;
+}
+
+.delete-item:hover {
+    cursor: pointer;
+    color: red;
+}
+
+p {
+    margin: 0;
+    width: 90%;
+}
+
+.strike {
+    text-decoration: line-through;
+}

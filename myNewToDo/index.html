@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/iconToDo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Для анимаций animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JavaScript - решает!</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mb-3 mt-3">Мои задачи! ToDo</h1>
+
+        <ul class="list-group mb-5" id="list-tasks">
+            <!-- <li class="list-group-item d-flex align-items-center">
+                <p class="mr-1 text-left">Задача 1
+                </p>
+                <i class="fas fa-trash-alt delete-item ml-auto"></i>
+            </li> -->
+
+            <!-- <li class="list-group-item d-flex align-items-center justify-content-center flex-column clear-list">
+                <div>
+                    <img src="img/empty.svg" alt="Списов пуст" width="64">
+                
+                </div>
+
+                <p class="text-center font-weight-bold clear-list_paragraph">
+                    Список пуст
+                </p>
+            </li> -->
+        </ul>
+
+        <form name="addTask">
+            <div class="form-group">
+                <label for="task">Новая задача</label>
+                <input type="text" class="form-control " id="task">
+                <div class="invalid-feedback">Пожалуйста, введите задачу!</div>
+                <small id="taskHelp" class="form-text text-muted">Например: <span class="font-italic">Купить хлеба!</span></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить</button>
+            <button type="button" class="btn btn-secondary" id="clear">Очистить список</button>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/5768510ccf.js" crossorigin="anonymous"></script>
+    <!-- Для анимаций wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>
